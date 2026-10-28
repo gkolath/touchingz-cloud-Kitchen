@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f4f1e8;
+  --color-paper: #fffcf6;
+  --color-ink: #1c2416;
+  --color-muted: #5e6856;
+  --color-leaf: #6a9a2f;
+  --color-leaf-deep: #3f6b1e;
+  --color-forest: #1e3320;
+  --color-line: #e4dece;
+  --color-gold: #c9963a;
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Libre Baskerville", ui-serif, Georgia, serif;
+  --radius-card: 1.75rem;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) { cursor: pointer; }
+  ::selection { background: #d7e8b4; color: var(--color-forest); }
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
